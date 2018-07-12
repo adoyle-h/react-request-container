@@ -1,0 +1,15 @@
+{
+    "presets": [
+        ["@babel/preset-env", {
+            "modules": false,
+            "targets": {
+                "browsers": ["last 3 versions", "ie >= 10"],
+                "node": "8"
+            }
+        }],
+        "@babel/preset-react",
+    ],
+    "plugins": [
+        "@babel/plugin-proposal-class-properties",
+    ],
+}

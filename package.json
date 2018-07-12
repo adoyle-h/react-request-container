@@ -1,0 +1,70 @@
+{
+  "name": "react-request-container",
+  "version": "0.0.0",
+  "description": "A simple React higher-order component for request.",
+  "browser.main": "dist/index.js",
+  "browser.var": "RequestContainer",
+  "browser.format": "umd",
+  "main": "dist/index.js",
+  "main.src": "src/index.js",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "react",
+    "request",
+    "component"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "pub": "npm run pub-patch",
+    "pub-patch": "npm-run-all version-patch pub-common",
+    "pub-minor": "npm-run-all version-minor pub-common",
+    "pub-major": "npm-run-all version-major pub-common",
+    "pub-common": "npm run build && npm publish && git push --tags && git rebase develop master && git push --all && git checkout develop",
+    "version-patch": "npm version patch -m 'Bump: patch version to %s'",
+    "version-minor": "npm version minor -m 'Bump: minor version to %s'",
+    "version-major": "npm version major -m 'Bump: major version to %s'",
+    "test": "ava"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "author": "ADoyle <adoyle.h@gmail.com>",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/adoyle-h/react-request-container",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adoyle-h/react-request-container.git"
+  },
+  "bugs": {
+    "url": "https://github.com/adoyle-h/react-request-container/issues"
+  },
+  "dependencies": {
+    "lodash": "^4.17.10",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.52",
+    "@babel/plugin-proposal-class-properties": "^7.0.0-beta.52",
+    "@babel/preset-env": "^7.0.0-beta.52",
+    "@babel/preset-react": "^7.0.0-beta.52",
+    "ava": "^1.0.0-beta.6",
+    "awesome-typescript-loader": "^5.0.0",
+    "babel-eslint": "^7.2.3",
+    "babel-plugin-transform-regenerator": "^6.26.0",
+    "eslint": "^4.17.0",
+    "eslint-config-react-app": "^2.0.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-prettier": "^2.3.1",
+    "eslint-plugin-react": "^7.5.1",
+    "npm-run-all": "^3.1.1",
+    "rollup": "^0.55.5",
+    "rollup-plugin-babel": "^4.0.0-beta.7",
+    "rollup-plugin-commonjs": "^8.4.1",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "source-map-loader": "^0.2.3"
+  }
+}
