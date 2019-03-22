@@ -177,7 +177,7 @@ class Request extends React.Component {
         const {status} = this.state;
         if (!Request.validStatusEnum.includes(status)) throw new Error(`Invalid status: ${status}`);
 
-        const reqState = <RequestState {...this.state} />;
+        const reqState = <RequestState {...this.state} key="requestState"/>;
         const methodName = `render${status}`;
         if (!this[methodName]) throw new Error(`Not found status render. MethodName: ${methodName}`);
         return [reqState, this[methodName]()];
