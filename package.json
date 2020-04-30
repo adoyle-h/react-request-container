@@ -25,7 +25,9 @@
     "version-patch": "npm version patch -m 'Bump: patch version to %s'",
     "version-minor": "npm version minor -m 'Bump: minor version to %s'",
     "version-major": "npm version major -m 'Bump: major version to %s'",
-    "test": "ava"
+    "test": "ava",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "engines": {
     "node": ">=8"
@@ -43,7 +45,8 @@
   "dependencies": {
     "lodash": "^4.17.10",
     "prop-types": "^15.6.2",
-    "react": "^16.4.1"
+    "react": "^16.4.1",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.52",
@@ -66,5 +69,6 @@
     "rollup-plugin-commonjs": "^8.4.1",
     "rollup-plugin-node-resolve": "^3.3.0",
     "source-map-loader": "^0.2.3"
-  }
+  },
+  "snyk": true
 }
