@@ -41,7 +41,7 @@
     "url": "https://github.com/adoyle-h/react-request-container/issues"
   },
   "dependencies": {
-    "lodash": "^4.17.10",
+    "lodash": "^4.17.16",
     "prop-types": "^15.6.2",
     "react": "^16.4.1"
   },
